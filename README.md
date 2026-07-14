@@ -132,6 +132,7 @@ hard failure — that is the one error a disassembler cannot survive.
 
 ## Install
 
+<!-- readme-check: skip=clones-this-repo-into-itself -->
 ```console
 $ git clone https://github.com/Wasserpuncher/x86-disasm
 $ cd x86-disasm
