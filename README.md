@@ -24,7 +24,7 @@ $ python -m x86disasm verify /usr/bin/git
 
 /usr/bin/git
   instructions:  ~61,412
-  decoded:       ~59,349  (96.6%)
+  decoded:       ~59,349  (~96.6%)
   wrong length:   0
   wrong text:     0
   exact:         ~59,349  (100.0000%)
@@ -57,6 +57,7 @@ This is the other half of [tinyjit](https://github.com/Wasserpuncher/tinyjit),
 which compiles a small language to real x86-64 machine code. That project emits
 bytes; this one turns them back into instructions. The circle closes:
 
+<!-- readme-check: skip=braucht-tinyjit -->
 ```console
 $ python -m tinyjit dump examples/fib.tj | ...
 00000000  55                              push rbp
