@@ -23,12 +23,17 @@ Point it at real compiler output and let a known-correct disassembler judge it:
 $ python -m x86disasm verify /usr/bin/git
 
 /usr/bin/git
-  instructions:   61,412
-  decoded:        59,349  (96.6%)
+  instructions:  ~61,412
+  decoded:       ~59,349  (96.6%)
   wrong length:   0
   wrong text:     0
-  exact:          59,349  (100.0000%)
+  exact:         ~59,349  (100.0000%)
 ```
+
+The tildes are there because those counts belong to *your* `git` binary, not
+mine — a different build has a different number of instructions in it. The two
+numbers that carry the claim have no tilde and never will: **wrong length: 0**
+and **wrong text: 0**. Those must be zero on any binary, on any machine.
 
 Across five binaries — bash, objdump, gcc, git and glibc:
 
